@@ -1,0 +1,9 @@
+.parent{
+  height: 250px;
+  width: 180px;
+  background-color: rgb(16, 83, 192);
+}
+.enfant1{
+  background-color: brown;
+  min-height: 180px;
+}
