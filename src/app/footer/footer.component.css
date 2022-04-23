@@ -1,4 +1,17 @@
 footer{
+}
+.top{
   background-color: forestgreen;
   height: calc(100vh - 70vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+
+}
+.buttom{
+  background-color: rgb(34, 66, 34);
+  height: 70px;
 }
