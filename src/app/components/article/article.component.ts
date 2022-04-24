@@ -221,4 +221,8 @@ products: Product[] = [
   //   return "2"
   // }
 
+  handleDeleteProduct(product: Product){
+    this.products = this.products.filter(p => p._id !== product._id)
+    console.log('handleDeleteProduct:',product);
+  }
 }
