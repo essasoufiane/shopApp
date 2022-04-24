@@ -1,7 +1,7 @@
-<div class="product_item">
+<div class="product_item" (click)="onClickProduct(product)">
   <div class="product_image"><img src="https://picsum.photos/200" width="300px" height="300px" alt="photo du produit"></div>
   <div class="product_details">
-    <div class="product_name"> <h2>{{papa?.name}}</h2></div>
-    <div class="product_price"> <h3>{{papa?.sold_price}}</h3><del><h3>{{papa?.regular_price}}</h3></del></div>
+    <div class="product_name"> <h2>{{product?.name}}</h2></div>
+    <div class="product_price"> <h3>{{product?.sold_price}}</h3><del><h3>{{product?.regular_price}}</h3></del></div>
   </div>
 </div>

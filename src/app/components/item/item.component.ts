@@ -7,12 +7,15 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  @Input() papa: Product | undefined
+  @Input() product: Product | undefined
 //undefined = soit product soit rien
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.papa);
+    console.log(this.product);
+  }
+  onClickProduct(papa: Product | undefined){
+    console.log(papa)
   }
 
 }
