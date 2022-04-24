@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-article',
@@ -13,28 +14,17 @@ export class ArticleComponent implements OnInit {
   names:string[] = ['jules','fatima','moulay'];
   test: any = 4.5
   date: Date = new Date()
-  produit: object[] = [
-    {
-    name: "robe pour femmes",
-    description: 'jolie robe pour femme',
-    sold_price: 1299,
-    regular_price: 1899,
-    isSolded: false,
-  },
-    {
-    name: "robe pour femmes",
-    description: 'jolie robe pour femme',
-    sold_price: 1299,
-    regular_price: 1899,
-    isSolded: false,
-  },
-    {
-    name: "robe pour femmes",
-    description: 'jolie robe pour femme',
-    sold_price: 1299,
-    regular_price: 1899,
-    isSolded: false,
-  },
+//
+products: Product[] = [
+  {
+  name: "robe du desert",
+  description:"robe de soirée",
+  category:['robe','pantalon','jogging'],
+  imageUrl:'https://picsum.photos/200/300',
+  sold_price: 29,
+  regular_price: 59,
+  created_at: new Date(),
+  }
 ]
 // -------------
   constructor() {
