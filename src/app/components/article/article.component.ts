@@ -27,6 +27,8 @@ products: Product[] = [
   // }
 ]
 // -------------
+  isDisplayModal: boolean = false
+  modalProduct: Product | undefined
   constructor() {
     this.title = 'My Shop'
   }
@@ -224,5 +226,17 @@ products: Product[] = [
   handleDeleteProduct(product: Product){
     this.products = this.products.filter(p => p._id !== product._id)
     console.log('handleDeleteProduct:',product);
+  }
+  handleDisplayProductViewModal(product: Product){
+    console.log("-------------------------------------------------")
+    console.log(product)
+    if(product){
+      this.isDisplayModal = true
+      this.modalProduct = product
+    }
+  }
+  handleCloseModal(){
+    this.isDisplayModal = false
+    this.modalProduct = undefined
   }
 }

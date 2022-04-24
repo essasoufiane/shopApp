@@ -2,22 +2,23 @@
   <div class="overlay"></div>
   <div class="modal-product-view-container d-flex">
     <div class="modal-product-view-image flex-1">
-      <img src="https://picsum.photos/200/300" alt="">
+      <img src="https://picsum.photos/200/300" [alt]="product?.name">
     </div>
     <div class="text-center modal-product-view-details flex-1 d-flex align-items-center justify-content-center flex-column">
-      <h2>Name</h2>
+      <h2>{{product?.name}}</h2>
       <div class="modal-product-view-details-price">
-        <h4>€12.44</h4>
+        <h4>{{(product?.sold_price || 0) / 100}}</h4>
         <del>
           <h4>
-            €67.77
+            {{(product?.regular_price || 0) / 100}}
           </h4>
         </del>
       </div>
       <div class="modal-product-view-details-created-at">
-        Créé le 12/12/20
+        Créé le {{product?.created_at | date:"DD/MM/YY"}}
       </div>
-      <button class="btn btn-primary">Achetez</button>
+      <button class="btn btn-primary"
+      (click)="closeModal()">Achetez</button>
     </div>
 
   </div>
