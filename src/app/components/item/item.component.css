@@ -9,9 +9,19 @@
   width: 300px;
   cursor: pointer;
 }
+.product_item .product_image img{
+  width: 100%;
+  height:400px ;
+}
 
 .product_item .product_details .product_price{
   display: flex;
   gap: 20px;
   justify-content: center;
+}
+@media screen and (max-width: 450px) {
+  .product_item{
+    width: 100%;
+  }
+
 }

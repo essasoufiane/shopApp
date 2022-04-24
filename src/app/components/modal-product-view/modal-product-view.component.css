@@ -22,4 +22,9 @@
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 660px) {
+  .modal-product-view-container{
+    width: 95%;
+  }
+  }
 
