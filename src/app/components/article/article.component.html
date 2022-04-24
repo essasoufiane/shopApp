@@ -15,4 +15,7 @@
     (deleteProductItem)="handleDeleteProduct($event)"
     >
   </app-item>
+  <div class="bar" *ngIf="!products.length">
+    <h1>Désolé, aucun article n'est disponible pour le moment</h1>
+  </div>
 </div>
