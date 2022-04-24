@@ -1,14 +1,8 @@
+<!-- fichier Producut-list -->
 <h1 class="text-center">{{title}}</h1>
 <h2>{{names}}</h2>
 <div>{{ products | json}}</div>
 <h2>{{date | date:'medium'}}</h2>
 <div class="product_list">
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
+    <app-item [papa]="products[4]"></app-item>
 </div>
