@@ -212,7 +212,7 @@ products: Product[] = [
           sold_price: 292,
           regular_price: 593,
           created_at: new Date(),
-          }
+          },
     ]
 
   }
