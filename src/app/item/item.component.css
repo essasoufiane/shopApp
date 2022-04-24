@@ -1,7 +1,13 @@
+.product_item:hover{
+  background-color: black;
+  color: #ccc;
+}
+
 .product_item{
   text-align: center;
   border: 0.1px solid #ccc;
   width: 300px;
+  cursor: pointer;
 }
 
 .product_item .product_details .product_price{
