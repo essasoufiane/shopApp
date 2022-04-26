@@ -9,7 +9,7 @@ import { ProdService } from 'src/app/services/product.service';
 })
 export class ArticleComponent implements OnInit {
 // test pedagogique
-  title: any  ;
+  title: string = 'My Shop'
   age: number = 28;
   isVerify: boolean = true;
   names:string[] = ['jules','fatima','moulay'];
