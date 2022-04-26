@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { interval, Observable, of } from 'rxjs';
 import { Product } from '../models/product';
 
 
@@ -201,6 +202,14 @@ export class ProdService {
       }
     })
 
+  }
+  getNumber(): Observable<Number>{
+    return of(98)
+
+  }
+
+  getSecond(): Observable<Number>{
+    return interval(1000)
   }
 
   addProduct(product: Product) {
