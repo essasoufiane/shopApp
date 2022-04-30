@@ -77,7 +77,7 @@
           },
           "defaultConfiguration": "development",
           "options": {
-            "disableHostCheck": false
+            "disableHostCheck": true
           }
         },
         "extract-i18n": {
