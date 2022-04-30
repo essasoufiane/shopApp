@@ -22,4 +22,10 @@ export class SignupComponent implements OnInit {
     }
   }
 
+  handleDelete(index: number){
+    if(index >= 0){
+     this.names.splice(index,1)
+    }
+  }
+
 }
