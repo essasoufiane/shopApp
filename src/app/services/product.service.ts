@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { interval, Observable, of } from 'rxjs';
 import { Product } from '../models/product';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import { Product } from '../models/product';
 export class ProdService {
 
   private products: Product[] = []
-  private urlApi: string = "http://shopapp.com/assets/products.json"
+  private urlApi: string = environment.serverUrl
 
   constructor(private http: HttpClient) { }
 

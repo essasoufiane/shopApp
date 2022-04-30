@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  serverUrl: "http://shopapp.com/assets/products.json",
+  siteName: "Shop App",
+  siteEmail: "soufiane.pro@yahoo.com",
 };
 
 /*
