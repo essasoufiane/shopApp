@@ -10,6 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ArticleComponent } from './components/article/article.component';
 import { ItemComponent } from './components/item/item.component';
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
+import { SigninComponent } from './components/auth/signin/signin.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { ModalProductViewComponent } from './components/modal-product-view/modal
     ArticleComponent,
     ItemComponent,
     ModalProductViewComponent,
+    SigninComponent,
+    SignupComponent,
 
 
   ],
