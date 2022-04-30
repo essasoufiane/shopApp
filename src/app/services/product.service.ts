@@ -10,7 +10,7 @@ import { Product } from '../models/product';
 export class ProdService {
 
   private products: Product[] = []
-  private urlApi: string = "http://localhost:4200/assets/api/product.json"
+  private urlApi: string = "http://shopapp.com/assets/products.json"
 
   constructor(private http: HttpClient) { }
 
