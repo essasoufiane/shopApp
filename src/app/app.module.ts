@@ -12,6 +12,7 @@ import { ItemComponent } from './components/item/item.component';
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { SignupComponent } from './components/auth/signup/signup.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
+  firstname: string = ""
+  names: string[] = []
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleSave(){
+    if(this.firstname){
+      this.names.push(this.firstname)
+      this.firstname = ""
+    }
   }
 
 }

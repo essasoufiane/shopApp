@@ -1,1 +1,12 @@
-<p>signup works!</p>
+<div class="signup signin">
+  <div class="form-linline firstname">
+    <input type="text" name="firstname" placeholder="Votre prénon" [(ngModel)]="firstname">
+    <button (click)="handleSave()">Enregister</button>
+
+  </div>
+<div class="name">
+  <ul>
+    <li *ngFor="let name of names">{{name}}</li>
+  </ul>
+</div>
+</div>

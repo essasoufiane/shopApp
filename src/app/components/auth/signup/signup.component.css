@@ -1,0 +1,26 @@
+.signup
+{
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  border: 0.1px solid black;
+  padding: 10px;
+
+}
+
+.form-linline input{
+  border: 0.1px solid white;
+  height: 40px;
+  margin: 5px;
+  width: 75%;
+  padding: 0 10px;
+  font-size: 1.4rem;
+}
+.form-linline button{
+  font-size: 1.4rem;
+  height: 40px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-weight: bolder;
+}
