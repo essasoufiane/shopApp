@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Product } from 'src/app/models/product';
 import { ProdService } from 'src/app/services/product.service';
 
@@ -7,7 +8,7 @@ import { ProdService } from 'src/app/services/product.service';
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.css']
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent implements OnInit, OnDestroy {
   // test pedagogique
   // age: number = 28;
   // isVerify: boolean = true;
@@ -15,6 +16,8 @@ export class ArticleComponent implements OnInit {
   // test: any = 4.5
   title: string = 'My Shop'
   date: Date = new Date()
+
+  productsSub: Subscription | undefined
 
   products: Product[] = [
     // {
@@ -34,15 +37,25 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit(): void {
     // this.products = this.productService.getProducts()
-    this.productService.getProducts()
-      .then((products: Product[]) => {
+    this.productsSub = this.productService.getProducts()
+    .subscribe({
+      next: (products: Product[])=>{
         this.products = products
-      })
-      .catch(() => {
-        this.products = []
-      })
+      },
+      error: (error: any)=>{
+        console.log("Error : ", error)
+      },
+      complete: ()=>{
+        console.log("complete !")
+      },
+    })
 
   }
+
+  ngOnDestroy(){
+    this.productsSub?.unsubscribe()
+  }
+
   // test pedago
   // hello():string{
   //   return "2"
