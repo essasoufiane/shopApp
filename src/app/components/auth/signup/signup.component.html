@@ -8,7 +8,9 @@
   <div class="name">
     <ul>
       <li class="d-flex justify-content-between" *ngFor="let name of names; let index = index">{{name}}
-        <button class="btn btn-danger" (click)="handleDelete(index)">supprimer</button>
+        <div> <button class="btn btn-warning mx-3" (click)="handleUpdate(index)">Modifier</button>
+          <button class="btn btn-danger" (click)="handleDelete(index)">Supprimer</button>
+        </div>
       </li>
 
     </ul>
